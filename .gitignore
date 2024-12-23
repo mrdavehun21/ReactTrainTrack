@@ -6,6 +6,8 @@ nodebackend/node_modules/
 # Ignore environment files in backend
 nodebackend/.env
 nodebackend/.env*
+reactfrontend/.env
+reactfrontend/.env*
 
 # Logs
 *.log

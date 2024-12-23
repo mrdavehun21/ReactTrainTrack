@@ -35,7 +35,7 @@ const icons = {
 };
 
 function VehicleMap({ vehicles, SearchResults, isVisible }) {
-  const mapTilerApiKey = process.env.REACT_APP_MAPTILER_API_KEY; 
+  const mapTilerAcessKey = process.env.REACT_APP_ACESSKEY; 
 
   return (
     <div style={{ position: 'relative' }}>
@@ -55,8 +55,8 @@ function VehicleMap({ vehicles, SearchResults, isVisible }) {
           style={{ height: '100%', width: '100%' }}
         >
           <TileLayer
-            url={`https://api.maptiler.com/maps/basic/{z}/{x}/{y}.png?key=${mapTilerApiKey}`}
-            attribution='&copy; <a href="https://www.maptiler.com/copyright/">MapTiler</a> contributors'
+            url={`https://tile.jawg.io/jawg-terrain/{z}/{x}/{y}{r}.png?access-token=${mapTilerAcessKey}`}
+            attribution='&copy; <a href="https://jawg.io" title="Tiles Courtesy of Jawg Maps" target="_blank">&copy; <b>Jawg</b>Maps</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
           {vehicles.length > 0 ? (
             vehicles.map((vehicle) => (
