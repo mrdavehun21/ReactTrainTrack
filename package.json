@@ -1,0 +1,15 @@
+{
+  "name": "react-node-app",
+  "version": "1.0.0",
+  "engines": {
+  "node": "22.12.0",
+  "npm": "10.9.2"
+  },
+  "scripts": {
+    "start": "node nodebackend/index.js",
+    "start-backend": "cd nodebackend && npm start",
+    "start-frontend": "cd reactfrontend && npm start",
+    "build": "cd reactfrontend && npm run build",
+    "heroku-postbuild": "cd reactfrontend && npm install --unsafe-perm && npm run build && cd ../nodebackend && npm install"
+  }
+}
